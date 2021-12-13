@@ -6,7 +6,7 @@
 
 - # Usages of **const** operator :
 
-1. The pointer variable point to a const value:
+1) The pointer variable point to a const value:
 
 These type of pointers are the one which cannot change the value they are pointing to. This means they cannot change the value of the variable whose address they are holding.A pointer to a constant is declared as : const int *ptr (the location of 'const' makes the pointer 'ptr' as a pointer to constant.
 
@@ -22,7 +22,7 @@ const int* ptr = &a;
 ptr++;    // right 
 ```
     
-2. The const pointer variable point to the value:
+2) The const pointer variable point to the value:
 These type of pointers are the one which cannot change address they are pointing to. This means that suppose there is a pointer which points to a variable (or stores the address of that variable). Now if we try to point the pointer to some other variable (or try to make the pointer store address of some other variable), then constant pointers are incapable of this.A constant pointer is declared as : int *const ptr ( the location of 'const' make the pointer 'ptr' as constant pointer)
 
 
@@ -39,7 +39,7 @@ ptr++;    // wrong
 
 
    
-3. The const pointer variable point to the value:
+3) The const pointer variable point to the value:
 ```markdown
 const int * const ptr;  
 ```
