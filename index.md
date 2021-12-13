@@ -1,37 +1,102 @@
-## Welcome to GitHub Pages
+## Name : Zeyad Amr Fekry
 
-You can use the [editor on GitHub](https://github.com/Zeyad-Amr/ZeyadAmr.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Sec : 1
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## B.N : 39
 
-### Markdown
+- # Usages of **const** operator :
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+     # 1) The pointer variable point to a const value: 
+    These type of pointers are the one which cannot change the value they are pointing to. This means they cannot change the value of the variable whose address they are holding.
 
-# Header 1
-## Header 2
-### Header 3
+    A pointer to a constant is declared as : const int *ptr (the location of 'const' makes the pointer 'ptr' as a pointer to constant.
+    
+    ```markdown
+    const int* ptr; 
+    ```
+    declares ptr a pointer to const int type. You can modify ptr itself but the object pointed to by ptr shall not be modified.
 
-- Bulleted
-- List
+    ```markdown
+    const int a = 10;
+    const int* ptr = &a;  
+    *ptr = 5; // wrong
+    ptr++;    // right 
+    ```
+    
+     # 2) The const pointer variable point to the value:
+    These type of pointers are the one which cannot change address they are pointing to. This means that suppose there is a pointer which points to a variable (or stores the address of that variable). Now if we try to point the pointer to some other variable (or try to make the pointer store address of some other variable), then constant pointers are incapable of this.
 
-1. Numbered
-2. List
+    A constant pointer is declared as : int *const ptr ( the location of 'const' make the pointer 'ptr' as constant pointer)
 
-**Bold** and _Italic_ and `Code` text
+  
+    ```markdown
+    int * const ptr;  
+    ```
+    declares ptr a const pointer to int type. You are not allowed to modify ptr but the object pointed to by ptr can be modified.
+    ```markdown
+    int a = 10;
+    int *const ptr = &a;  
+    *ptr = 5; // right
+    ptr++;    // wrong 
+    ```
+    Generally I would prefer the declaration like this which make it easy to read and understand ( read from right to left ) :
+    ```markdown
+    int const  *ptr; // ptr is a pointer to constant int 
+    int *const ptr;  // ptr is a constant pointer to int 
+    ```
+    
+   
+     # 3) The const pointer variable point to the value:
+    These type of pointers are the one which cannot change address they are pointing to. This means that suppose there is a pointer which points to a variable (or stores the address of that variable). Now if we try to point the pointer to some other variable (or try to make the pointer store address of some other variable), then constant pointers are incapable of this.
 
-[Link](url) and ![Image](src)
-```
+    A constant pointer is declared as : int *const ptr ( the location of 'const' make the pointer 'ptr' as constant pointer)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+  
+    ```markdown
+    const int * const ptr;  
+    ```
+    declares ptr a const pointer to int type. You are not allowed to modify ptr but the object pointed to by ptr can be modified.
+    ```markdown
+    const int a = 10;
+    const int *const ptr = &a;
+    ```
 
-### Jekyll Themes
+   ## Generally I would prefer the declaration like this which make it easy to read and understand ( read from right to left ) :
+    ```markdown
+    int const  *ptr; // ptr is a pointer to constant int 
+    int *const ptr;  // ptr is a constant pointer to int
+    const int *const ptr;  // ptr is a constant pointer to constant int 
+    ```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Zeyad-Amr/ZeyadAmr.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- # Usages of **&** operator :
 
-### Support or Contact
+    # 1) Take the address of a variable :
+       
+    ```markdown
+    int x;
+    void\* p = &x;  
+    ```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    # 2) Pass an argument by reference to a function  :
+       
+    ```markdown
+    void foo(CDummy& x);
+    void fooconst(const CDummy& x); 
+    ```
+
+    # 3) Declare a reference variable :
+       
+    ```markdown
+    int k = 0;
+    int& r = k;
+    r = 3;
+    assert( k == 3 )  
+    ```
+
+    # 4) Bitwise and Operator :
+       
+    ```markdown
+    int a = 3 & 1;  
+    ```
+        
