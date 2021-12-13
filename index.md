@@ -6,7 +6,7 @@
 
 - # Usages of **const** operator :
 
-    1. The pointer variable point to a const value: 
+    1) The pointer variable point to a const value: 
         These type of pointers are the one which cannot change the value they are pointing to. This means they cannot change the value of the variable whose address they are holding.
 
         A pointer to a constant is declared as : const int *ptr (the location of 'const' makes the pointer 'ptr' as a pointer to constant.
@@ -23,7 +23,7 @@
         ptr++;    // right 
         ```
     
-    2. The const pointer variable point to the value:
+    2) The const pointer variable point to the value:
         These type of pointers are the one which cannot change address they are pointing to. This means that suppose there is a pointer which points to a variable (or stores the address of that variable). Now if we try to point the pointer to some other variable (or try to make the pointer store address of some other variable), then constant pointers are incapable of this.
 
         A constant pointer is declared as : int *const ptr ( the location of 'const' make the pointer 'ptr' as constant pointer)
@@ -42,7 +42,7 @@
  
     
    
-    3. The const pointer variable point to the value:
+    3) The const pointer variable point to the value:
         These type of pointers are the one which cannot change address they are pointing to. This means that suppose there is a pointer which points to a variable (or stores the address of that variable). Now if we try to point the pointer to some other variable (or try to make the pointer store address of some other variable), then constant pointers are incapable of this.
 
         A constant pointer is declared as : int *const ptr ( the location of 'const' make the pointer 'ptr' as constant pointer)
@@ -66,32 +66,32 @@ const int *const ptr;  // ptr is a constant pointer to constant int
 
 - # Usages of **&** operator :
 
-1) Take the address of a variable :
-       
-    ```markdown
-    int x;
-    void* p = &x;  
-    ```
+    1) Take the address of a variable :
+        
+        ```markdown
+        int x;
+        void* p = &x;  
+        ```
 
-2) Pass an argument by reference to a function  :
-       
-    ```markdown
-    void foo(CDummy& x);
-    void fooconst(const CDummy& x); 
-    ```
+    2) Pass an argument by reference to a function  :
+        
+        ```markdown
+        void foo(CDummy& x);
+        void fooconst(const CDummy& x); 
+        ```
 
-3) Declare a reference variable :
-       
-    ```markdown
-    int k = 0;
-    int& r = k;
-    r = 3;
-    assert( k == 3 )  
-    ```
+    3) Declare a reference variable :
+        
+        ```markdown
+        int k = 0;
+        int& r = k;
+        r = 3;
+        assert( k == 3 )  
+        ```
 
-4) Bitwise and Operator :
-       
-    ```markdown
-    int a = 3 & 1;  
-    ```
+    4) Bitwise and Operator :
+        
+        ```markdown
+        int a = 3 & 1;  
+        ```
         
